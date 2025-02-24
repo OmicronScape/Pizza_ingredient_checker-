@@ -31,7 +31,7 @@ pizzas = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10]
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-# Question 1: Which pizzas have gouda cheese, tomato sauce, and vegetables?
+
 question1 = {ingridients[0], ingridients[1], ingridients[6]}
 solution1 = [f"p{i+1}" for i, pizza in enumerate(pizzas) if question1.issubset(pizza)]
 
@@ -41,7 +41,7 @@ if solution1:
 else:
     print("No pizzas found with these ingredients")
 
-# Question 2: Which pizzas have gouda cheese, tomato sauce, and either chicken or cold cuts?
+
 question2 = {ingridients[0], ingridients[1]}
 solution2 = [f"p{i+1}" for i, pizza in enumerate(pizzas) if question2.issubset(pizza) and (ingridients[3] in pizza or ingridients[4] in pizza)]
 
@@ -51,8 +51,7 @@ if solution2:
 else:
     print("No pizzas found with these ingredients")
 
-# Question 3: Which pizzas have gouda cheese, chicken but not tomato sauce?
-question3 = {ingridients[0], ingridients[4]}
+
 solution3 = [f"p{i+1}" for i, pizza in enumerate(pizzas) if question3.issubset(pizza) and ingridients[1] not in pizza]
 
 print("\n[Question 3]: The pizzas with gouda cheese, chicken but not tomato sauce are:")
@@ -61,7 +60,7 @@ if solution3:
 else:
     print("No pizzas found with these ingredients")
 
-# Question 4: Which pizzas have gouda cheese, vegetables, and carbonara sauce?
+
 question4 = {ingridients[0], ingridients[2], ingridients[6]}
 solution4 = [f"p{i+1}" for i, pizza in enumerate(pizzas) if question4.issubset(pizza)]
 
@@ -71,7 +70,7 @@ if solution4:
 else:
     print("No pizzas found with these ingredients!")
 
-# Question 5: Which pizzas have gouda cheese and either cold cuts or mushrooms but not both?
+
 question5 = {ingridients[0]}
 solution5 = [f"p{i+1}" for i, pizza in enumerate(pizzas) if question5.issubset(pizza) and ((ingridients[3] in pizza) ^ (ingridients[5] in pizza))]
 
